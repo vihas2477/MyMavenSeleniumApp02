@@ -10,7 +10,7 @@ public class App {
     public static void main(String[] args) {
 
         // IMPORTANT: Chromium driver path (usually correct on Ubuntu)
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromiumbrowser");
 
         ChromeOptions options = new ChromeOptions();
 
