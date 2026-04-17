@@ -28,17 +28,17 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'java -jar target/app.jar'
+                sh 'java -jar target/MyMavenSeleniumApp02-1.0-SNAPSHOT.jar'
             }
         }
     }
 
     post {
         success {
-            echo 'SUCCESS: Build and execution completed'
+            echo 'SUCCESS'
         }
         failure {
-            echo 'FAILED: Check logs'
+            echo 'FAILED'
         }
     }
 }
