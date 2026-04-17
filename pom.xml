@@ -9,13 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <!-- FIX: predictable jar name -->
     <build>
         <finalName>app</finalName>
 
         <plugins>
 
-            <!-- Java 11 compiler (required for Selenium 4+) -->
+            <!-- Java compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -26,7 +25,7 @@
                 </configuration>
             </plugin>
 
-            <!-- JAR with main class -->
+            <!-- JAR plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -52,7 +51,7 @@
             <version>4.29.0</version>
         </dependency>
 
-        <!-- JUnit (optional) -->
+        <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -61,6 +60,5 @@
         </dependency>
 
     </dependencies>
-<finalName>app</finalName>
 
 </project>
