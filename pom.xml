@@ -61,5 +61,6 @@
         </dependency>
 
     </dependencies>
+<finalName>app</finalName>
 
 </project>
