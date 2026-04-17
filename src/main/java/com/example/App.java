@@ -9,18 +9,17 @@ public class App {
 
     public static void main(String[] args) {
 
-        // ✅ Use system chromedriver (recommended for Jenkins ARM64)
+        // IMPORTANT: system chromedriver (ARM-safe)
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         ChromeOptions options = new ChromeOptions();
 
-        // 🔥 REQUIRED for Jenkins/Linux/ARM
+        // Jenkins + Linux + ARM settings
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
-        options.addArguments("--remote-allow-origins=*");
 
         WebDriver driver = new ChromeDriver(options);
 
@@ -31,7 +30,7 @@ public class App {
             driver.findElement(By.id("password")).sendKeys("Password123");
             driver.findElement(By.id("submit")).click();
 
-            System.out.println("Login test completed successfully");
+            System.out.println("Login successful");
 
         } catch (Exception e) {
             e.printStackTrace();
