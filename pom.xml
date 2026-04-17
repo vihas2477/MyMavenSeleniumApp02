@@ -10,11 +10,8 @@
     <packaging>jar</packaging>
 
     <build>
-        <finalName>app</finalName>
-
         <plugins>
 
-            <!-- Java compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -25,7 +22,6 @@
                 </configuration>
             </plugin>
 
-            <!-- JAR plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -44,14 +40,12 @@
 
     <dependencies>
 
-        <!-- Selenium -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.29.0</version>
         </dependency>
 
-        <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
