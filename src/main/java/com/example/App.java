@@ -9,12 +9,15 @@ public class App {
 
     public static void main(String[] args) {
 
-        // IMPORTANT: system chromedriver (ARM-safe)
+        // IMPORTANT: Chromium driver path (usually correct on Ubuntu)
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         ChromeOptions options = new ChromeOptions();
 
-        // Jenkins + Linux + ARM settings
+        // ✅ TELL SELENIUM YOU ARE USING CHROMIUM
+        options.setBinary("/usr/bin/chromium");
+
+        // Jenkins / ARM safe flags
         options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
